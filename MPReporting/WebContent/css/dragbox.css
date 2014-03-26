@@ -1,0 +1,130 @@
+/* CSS NEEDED ONLY IN THE DEMO */
+#mainBoxContainer{
+	width:900px;
+	margin:0 auto;
+	text-align:left;
+	background-color:#FFF;
+}
+
+
+/* This is the box that is parent to the dragable items */
+#dragableElementsParentBox{
+	padding:10px;	/* Air */
+}
+
+.smallArticle,.bigArticle{
+	margin-top:5px;
+	float:left;
+	border:1px solid #000;
+	background-color:#FFF;
+	padding:2px;
+	margin-right:10px;
+	margin-bottom:5px;
+}
+.smallArticle img,.bigArticle img{
+	float:left;
+	padding:5px;
+}
+.smallArticle .rightImage,.bigArticle .rightImage{
+	float:right;
+}
+.smallArticle{
+	width:274px;		
+}
+.bigArticle{
+	width:564px;
+}
+.clear{
+	clear:both;
+}
+
+/* END DEMO CSS */
+
+/* REQUIRED CSS */
+
+#rectangle{
+	float:left;
+	border:1px dotted #F00;	/* Red border */
+	background-color:#FFF;
+}
+#insertionMarker{	/* Don't change the rules for the insertionMarker */
+	width:6px;
+	position:absolute;
+	display:none;
+}
+#insertionMarker img{	/* Don't change the rules for the insertionMarker */
+	float:left;
+}		
+#dragDropMoveLayer{	/* Dragable layer - Not need if you're using 'rectangle' mode */
+	position:absolute;
+	display:none;
+	border:1px solid #000;
+	filter:alpha(opacity=50);	/* 50% opacity , i.e. transparency */
+	opacity:0.5;	/* 50% opacity , i.e. transparency */
+
+}
+/*Filtros*/
+.divFiltro{
+   background-color: #ccc; /*shadow color*/
+   color: inherit;
+   margin-left: 0px;
+   margin-top: 4px;
+   width: 100px;
+}
+
+.blur{
+   background-color: #ccc; /*shadow color*/
+   color: inherit;
+   margin-left: 0px;
+   margin-top: 4px;
+   width: 430px;
+}
+
+.blurBig{
+   background-color: #ccc; /*shadow color*/
+   color: inherit;
+   margin-left: 0px;
+   margin-top: 4px;
+   width: 870px;
+}
+
+.shadow, .content{
+   position: relative;
+   bottom: 2px;
+   right: 2px;
+}
+.shadow{
+   background-color: #666; /*shadow color*/
+   color: inherit;
+}
+.content{
+   background-color: #fff; /*background color of content*/
+   color: #000; /*text color of content*/
+   border: 1px solid #000; /*border color*/
+   /*padding: .2em 2ex;*/
+}
+.content IMG{
+   border: 1px solid #000000;
+}
+
+.mainBox{
+	padding:5px;
+	float:left;	
+}
+
+
+.title_bar{
+	padding-top:0px; 
+	padding-left:2px;
+	height:17px; 
+	background-color:#7190e0;
+	color:#FFFFFF;
+	font-size:12px;
+	
+	.padding-top:0px; 
+	.padding-left:2px;
+	.height:17px; 
+	.background-color:#7190e0;
+	.color:#FFFFFF;
+	.font-size:12px;
+}

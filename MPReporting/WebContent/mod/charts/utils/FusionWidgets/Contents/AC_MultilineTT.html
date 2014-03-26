@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>FusionCharts v3 Documentation</title>
+<link rel="stylesheet" href="Style.css" type="text/css" />
+</head>
+
+<body>
+<table width="98%" border="0" cellspacing="0" cellpadding="3" align="center">
+  <tr> 
+    <td width="100%"><h2 class="pageHeader">Putting tooltip in multiple lines </h2></td>
+  </tr>
+  <tr>
+    <td valign="top" class="text">FusionWidgets v3 allows you to put your tool tips in multiple lines with a little   manual tweaking. Consider the XML below:</td>
+  </tr>
+  <tr>
+    <td valign="top" class="codeBlock">&lt;chart&gt;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;set label='John' value='420' <strong>tooltext='John   Miller&amp;lt;BR&amp;gt;Score:   420&amp;lt;BR&amp;gt;Rank:2'</strong>/&gt;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;set label='Mary'   value='295' <strong>tooltext='Mary Evans&amp;lt;BR&amp;gt;Score:   295&amp;lt;BR&amp;gt;Rank:3'</strong>/&gt;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;set label='Tom'   value='523' <strong>tooltext='Tom Bowler&amp;lt;BR&amp;gt;Score:   523&amp;lt;BR&amp;gt;Rank:1'</strong>/&gt; <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;styles&gt;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;definition&gt;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;style   name='myHTMLFont' type='font' <strong>isHTML='1'</strong> /&gt;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/definition&gt;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;application&gt;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;apply <strong>toObject='TOOLTIP' styles='myHTMLFont'</strong> /&gt;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/application&gt;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/styles&gt;<br />
+    &lt;/chart&gt;</td>
+  </tr>
+  <tr>
+    <td valign="top" class="text">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top" class="text"><p>In the above XML, we're first setting 3 lines tool tip content for each &lt;set&gt;. To separate each line we use the &lt;BR&gt; HTML tag. However, since XML cannot use &lt; and &gt;, so we   convert &lt;BR&gt; to &amp;lt;BR&amp;gt; . Thereafter, we need to tell   FusionWidgets that we'll be displaying HTML content in tool-tip. So, we create a   new font style type with <span class="codeInline">isHTML</span> property set to 1   and then apply it to <span class="codeInline">TOOLTIP</span> object. </p>
+    <p>When you now see the chart, you'll get the following output:</p></td>
+  </tr>
+  <tr>
+    <td valign="top" class="text">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top" class="text"><img src="Images/AC_MultilineTT.jpg" width="400" height="350" /></td>
+  </tr>
+  <tr>
+    <td valign="top" class="text">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>
